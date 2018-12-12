@@ -42,6 +42,15 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 		<!--Spring AOP end-->
+
+		<!--reference custom common util start-->
+		<dependency>
+			<groupId>com.example.spring-cloud</groupId>
+			<artifactId>common-util</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--reference custom common util end-->
+
 	</dependencies>
 
 	<build>
