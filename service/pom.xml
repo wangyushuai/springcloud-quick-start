@@ -11,7 +11,7 @@
 	<groupId>com.example.spring-cloud</groupId>
 	<artifactId>service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<name>service</name>
 	<description>Demo project for Spring Boot</description>
 
