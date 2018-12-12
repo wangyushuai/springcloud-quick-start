@@ -1,9 +1,11 @@
 package com.example.springcloud.productservice.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by wangyushuai@fang.com on 2018/12/12.
  */
-public class Product {
+public class Product implements Serializable {
     public  Product(){ }
 
     public  Product(int id, String name, int price, int store){
