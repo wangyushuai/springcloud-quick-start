@@ -4,7 +4,7 @@ package com.example.springcloud.productservice.service;
  * Created by wangyushuai@fang.com on 2018/12/12.
  */
 
-import com.example.springcloud.productservice.domain.Product;
+import com.example.springcloud.commondomain.Product;
 import org.springframework.stereotype.Service;
 
 @Service
