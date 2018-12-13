@@ -1,6 +1,8 @@
 package com.example.springcloud.productservice.controller;
 
+import com.example.springcloud.util.config.ServerConfig;
 import com.example.springcloud.util.response.RestResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    @Autowired
+    ServerConfig serverConfig;
+
     @RequestMapping({"/","/hello"})
     public RestResponse hello() {
-        return RestResponse.buildSuccess("welcome to product service");
+        String message = String.format("welcome to product service! sever-%s:%s", serverConfig.getServerIp(),serverConfig.getServerPort());
+        return RestResponse.buildSuccess(message);
     }
 }
 
