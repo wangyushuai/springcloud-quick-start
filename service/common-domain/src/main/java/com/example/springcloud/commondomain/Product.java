@@ -1,4 +1,4 @@
-package com.example.springcloud.productservice.domain;
+package com.example.springcloud.commondomain;
 
 import java.io.Serializable;
 

@@ -51,6 +51,14 @@
 		</dependency>
 		<!--reference custom common util end-->
 
+		<!--reference common domain model start-->
+		<dependency>
+			<groupId>com.example.spring-cloud</groupId>
+			<artifactId>common-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--reference common domain model end-->
+
 	</dependencies>
 
 	<build>
@@ -65,6 +73,7 @@
 	<modules>
 		<module>order-service</module>
 		<module>product-service</module>
+		<module>common-domain</module>
 	</modules>
 
 </project>
