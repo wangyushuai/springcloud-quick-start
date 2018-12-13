@@ -31,6 +31,16 @@ public class TimeTakesAspect {
      * @AfterThrowing  目标方法执行异常时调用
      */
 
+        /**
+     * @description: 定义切点-切点 为RedisClient全部方法
+     * execution 参数介绍：
+     * 1. public * *(..) ——  第一个* 表示任意返回值，前面可能有public, 一般省略
+     * 2. * *.*(..) —— 第二个 * 表示任意包
+     * 3. * *.*(..) —— 第三个 *  表示任意方法
+     * 4. * *.*(..) —— (..) 表示任意参数
+     * 5. 参考文档： https://blog.csdn.net/weixin_40315550/article/details/78941291
+     */
+
 
     /**
      * API计时切面
@@ -39,7 +49,7 @@ public class TimeTakesAspect {
      * @return
      * @throws Throwable
      */
-    @Around("execution(public com.example.springcloud.util.response.RestResponse *.controller.*.*(..))")
+    @Around("execution(public com.example.springcloud.util.response.RestResponse *..controller.*.*(..))")
     public Object addKeyPrevStr(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTimeMillis  = System.currentTimeMillis();
         RestResponse response = (RestResponse) proceedingJoinPoint.proceed();
