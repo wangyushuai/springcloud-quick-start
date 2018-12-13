@@ -13,10 +13,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>SpringCloud bussiness service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud.version>Greenwich.M3</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -42,6 +43,13 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 		<!--Spring AOP end-->
+
+		<!--SpringCloud-Hystrix start-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<!--SpringCloud-Hystrix end-->
 
 		<!--reference custom common util start-->
 		<dependency>
@@ -75,5 +83,26 @@
 		<module>product-service</module>
 		<module>common-domain</module>
 	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
 
 </project>

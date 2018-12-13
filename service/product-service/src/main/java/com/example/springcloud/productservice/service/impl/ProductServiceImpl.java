@@ -1,6 +1,6 @@
 package com.example.springcloud.productservice.service.impl;
 
-import com.example.springcloud.productservice.domain.Product;
+import com.example.springcloud.commondomain.Product;
 import com.example.springcloud.productservice.service.ProductService;
 import org.springframework.stereotype.Service;
 
