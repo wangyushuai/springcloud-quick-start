@@ -16,9 +16,10 @@ public class RestResponse implements Serializable {
 
     private final static long serialVersionUID = 1L;
     private final static int STATUS_SUCCESS = 200;
+    private final static int STATUS_ERROR_SERVICE_UNAVAILIABLE = 503;
 
     private int status;
-    @JsonInclude(JsonInclude.Include.NON_NULL)//不为空时,返回
+    //@JsonInclude(JsonInclude.Include.NON_NULL)//不为空时,返回
     private Object data;
     private String message;
 
@@ -41,8 +42,23 @@ public class RestResponse implements Serializable {
         this.data = data;
     }
 
+    /**
+     * 请求成功
+     * @param data
+     * @return
+     */
     public static RestResponse buildSuccess(Object data) {
         return new RestResponse(STATUS_SUCCESS, "success", data);
+    }
+
+
+    /**
+     * 返回错误码（服务不可用时，返回此方法），但推荐直接使用异常类
+     * @param data
+     * @return
+     */
+    public static RestResponse buildError_ServiceUnavailable(Object data) {
+        return new RestResponse(STATUS_ERROR_SERVICE_UNAVAILIABLE, "error", data);
     }
 
 //    public static RestResponse buildError(Object data) {
