@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by wangyushuai@fang.com on 2018/12/12.
  */
-
-@Service
 public interface ProductOrderService {
     /**
      * 根据Id查询商品
