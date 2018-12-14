@@ -2,6 +2,7 @@ package com.example.springcloud.util.json;
 
 import java.io.IOException;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -40,4 +41,17 @@ public class JsonUtils {
             return null;
         }
     }
+
+
+    /**
+     * json字符串转JsonNode对象的方法
+     */
+    public static JsonNode str2JsonNode(String str){
+        try {
+            return  objectMapper.readTree(str);
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
 }
