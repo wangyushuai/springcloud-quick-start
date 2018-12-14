@@ -1,10 +1,11 @@
 # 目录: Spring-Cloud2.x 整合全家桶及Netflix 组件
-    author: yushuai_w@163.com
+
  ![Spring-Cloud截图](https://img-blog.csdnimg.cn/20181212194132161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NodWFpX3d5,size_16,color_FFFFFF,t_70)
 
 ## 更新日志
 20181214 : 初始化基础模块架构
 
+author: **yushuai_w@163.com**
 ## 项目亮点
 1. 通用工具部分(common-util)：封装了部分业务场景的实用工具类(如：AOP API计时, Restful响应模型, 读取服务器配置工具类, JSON工具类, 异常工具类等),大家可以直接copy使用。
 
