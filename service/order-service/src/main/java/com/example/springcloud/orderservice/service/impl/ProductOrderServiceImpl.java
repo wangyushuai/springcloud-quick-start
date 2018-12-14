@@ -2,6 +2,7 @@ package com.example.springcloud.orderservice.service.impl;
 
 import com.example.springcloud.commondomain.Product;
 import com.example.springcloud.orderservice.service.ProductOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,9 +14,12 @@ public class ProductOrderServiceImpl implements ProductOrderService {
 
     private final static String URL_PRODUCT = "http://localhost:8092/api/v1/product/find-by-id";
 
+    @Autowired
+    RestTemplate restTemplate;
+
     @Override
     public boolean save(int productId, int userId) {
-        RestTemplate restTemplate = new RestTemplate();
+        //RestTemplate restTemplate = new RestTemplate();
         Product product = restTemplate.getForObject(URL_PRODUCT+"?id=" + productId,Product.class);
         return false;
     }
