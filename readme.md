@@ -6,13 +6,13 @@
 20181214 : 初始化基础模块架构
 
 ## 项目亮点
-1. 通用工具部分(common-util):封装了部分业务场景的实用工具类(如：AOP API计时, Restful响应模型, 读取服务器配置工具类, JSON工具类, 异常工具类等),大家可以直接copy使用。
+1. 通用工具部分(common-util)：封装了部分业务场景的实用工具类(如：AOP API计时, Restful响应模型, 读取服务器配置工具类, JSON工具类, 异常工具类等),大家可以直接copy使用。
 
-2. 组件部分(component): 整合了SpringCloud全家桶及Netflix组件(Eureka,Zuul,Hystrix,Ribbon,Feign)
+2. 组件部分(component)： 整合了SpringCloud全家桶及Netflix组件(Eureka,Zuul,Hystrix,Ribbon,Feign)
 
-3. 微服务部分(service): 采用了三个典型的业务场景Demo(订单服务,产品服务,用户服务，通用实体集)，模拟了服务间的调用（Feign,Rebbion）,服务熔断(hystrix)等场景
+3. 微服务部分(service)： 采用了三个典型的业务场景Demo(订单服务,产品服务,用户服务，通用实体集)，模拟了服务间的调用（Feign,Rebbion)，服务熔断(hystrix)等场景
 
-4. 项目架构: 项目结构采用了合理的Maven聚合工程设计, 各微服务依赖于父Service,通过父Service控制各模块依赖版本
+4. 项目架构：项目结构采用了合理的Maven聚合工程设计, 各微服务依赖于父Service,通过父Service控制各模块依赖版本
 
 ## 文档结构说明
 1. component 目录为 SpringCloud 组件整合(Eureka,Zuul,Hystrix,Ribbon,Feign)
