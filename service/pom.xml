@@ -44,12 +44,33 @@
 		</dependency>
 		<!--Spring AOP end-->
 
+		<!--springCloud discovery eureka discovery(client) Eureka服务发现  start -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<!--springCloud discovery eureka discovery(client) end -->
+
 		<!--SpringCloud-Hystrix start-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 		<!--SpringCloud-Hystrix end-->
+
+		<!--springCloud routing -  ribbon start-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+		<!-- springCloud routing - ribbon end-->
+
+		<!--springCloud routing -  openfeign start-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<!-- springCloud routing - openfeign end -->
 
 		<!--reference custom common util start-->
 		<dependency>
@@ -59,13 +80,13 @@
 		</dependency>
 		<!--reference custom common util end-->
 
-		<!--reference common domain model start-->
+		<!--reference common domain model (通用实体集) start -->
 		<dependency>
 			<groupId>com.example.spring-cloud</groupId>
 			<artifactId>common-domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!--reference common domain model end-->
+		<!-- reference common domain model end -->
 
 	</dependencies>
 
