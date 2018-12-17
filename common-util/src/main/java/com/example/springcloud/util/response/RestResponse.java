@@ -10,13 +10,26 @@ import java.util.Date;
  *
  * @author wangyushuai@fang.com
  * @date 2018/9/26
- * Json响应工具类
+ * REST请求响应工具类
  */
 public class RestResponse implements Serializable {
 
     private final static long serialVersionUID = 1L;
+    /**
+     * 成功
+     */
     private final static int STATUS_SUCCESS = 200;
+
+    /**
+     * 代码错误
+     */
+    private final static int STATUS_ERROR_INTERNAL_SERVER_ERROR = 500;
+
+    /**
+     * 服务不可用（针对熔断&服务降级的情况）
+     */
     private final static int STATUS_ERROR_SERVICE_UNAVAILIABLE = 503;
+
 
     private int status;
     //@JsonInclude(JsonInclude.Include.NON_NULL)//不为空时,返回
@@ -51,6 +64,15 @@ public class RestResponse implements Serializable {
         return new RestResponse(STATUS_SUCCESS, "success", data);
     }
 
+
+    /**
+     * 代码错误
+     * @param data
+     * @return
+     */
+    public static RestResponse buildError_InternalServerError(Object data) {
+        return new RestResponse(STATUS_ERROR_INTERNAL_SERVER_ERROR, "error", data);
+    }
 
     /**
      * 返回错误码（服务不可用时，返回此方法），但推荐直接使用异常类
