@@ -3,6 +3,7 @@
  ![Spring-Cloud截图](https://img-blog.csdnimg.cn/20181212194132161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NodWFpX3d5,size_16,color_FFFFFF,t_70)
 
 ## 更新日志
+20181217 : SpringCloud 整合Hystrix2.1.0(熔断&服务降级)
 20181214 : 初始化基础模块架构
 
 author: **yushuai_w@163.com**
@@ -15,7 +16,7 @@ author: **yushuai_w@163.com**
 
 4. 项目架构：项目结构采用了合理的Maven聚合工程设计, 各微服务依赖于父Service,通过父Service控制各模块依赖版本
 
-## 文档结构说明
+## 代码目录结构说明
 1. component 目录为 SpringCloud 组件整合(Eureka,Zuul,Hystrix,Ribbon,Feign)
 
 2. service 目录为业务服务目录，将模拟3个微服务(商品服务，订单服务，用户服务)，完成他们之间的项目调用、熔断、拉取配置等场景 

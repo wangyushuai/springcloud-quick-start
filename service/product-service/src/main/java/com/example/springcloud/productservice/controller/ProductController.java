@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by wangyushuai@fang.com on 2018/12/12.
+ * 产品服务
+ * @author wangyushuai@fang.com
+ * @date 2018/12/12
  */
 
 @RestController
@@ -32,6 +34,7 @@ public class ProductController {
                 e.printStackTrace();
             }
         }
+        System.out.println("收到请求商品接口查询！");
         return RestResponse.buildSuccess(productService.findById(id));
     }
 }

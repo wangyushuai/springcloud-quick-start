@@ -23,9 +23,9 @@ public class OrderServiceApplication {
 	 * Ribbon
 	 * @return
 	 */
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+//	@Bean
+//	@LoadBalanced
+//	public RestTemplate restTemplate() {
+//		return new RestTemplate();
+//	}
 }
