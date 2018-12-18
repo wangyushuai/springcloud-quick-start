@@ -7,21 +7,20 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- *
+ * REST请求响应工具类
  * @author wangyushuai@fang.com
  * @date 2018/9/26
- * REST请求响应工具类
  */
 public class RestResponse implements Serializable {
 
     private final static long serialVersionUID = 1L;
     /**
-     * 成功
+     * 成功状态
      */
     private final static int STATUS_SUCCESS = 200;
 
     /**
-     * 代码错误
+     * 代码错误状态
      */
     private final static int STATUS_ERROR_INTERNAL_SERVER_ERROR = 500;
 
@@ -31,9 +30,19 @@ public class RestResponse implements Serializable {
     private final static int STATUS_ERROR_SERVICE_UNAVAILIABLE = 503;
 
 
+    /**
+     * API 状态
+     */
     private int status;
     //@JsonInclude(JsonInclude.Include.NON_NULL)//不为空时,返回
+    /**
+     * API 数据
+     */
     private Object data;
+
+    /**
+     * 附加提示信息
+     */
     private String message;
 
     /**
@@ -83,9 +92,6 @@ public class RestResponse implements Serializable {
         return new RestResponse(STATUS_ERROR_SERVICE_UNAVAILIABLE, "error", data);
     }
 
-//    public static RestResponse buildError(Object data) {
-//        return new RestResponse(STATUS_SUCCESS, "success", data);
-//    }
 
     public int getStatus() {
         return status;
