@@ -57,6 +57,12 @@ public class RestResponse implements Serializable {
     //@JsonIgnore//不返回注解
     private long time;
 
+    /**
+     * 构造函数
+     * @param code
+     * @param message
+     * @param data
+     */
     public RestResponse(int code, String message, Object data) {
         super();
         this.status = code;
