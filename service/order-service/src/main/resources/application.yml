@@ -1,0 +1,11 @@
+server:
+  port: 8092
+#execution.isolation.thread.timeoutInMilliseconds=3000
+# Hystrix 熔断配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
