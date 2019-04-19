@@ -3,7 +3,10 @@
  ![Spring-Cloud截图](https://img-blog.csdnimg.cn/20181212194132161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NodWFpX3d5,size_16,color_FFFFFF,t_70)
 
 ## 更新日志
+20190419 ： 添加前台页面 front-page 模块
+
 20181217 : SpringCloud 整合Hystrix2.1.0(熔断&服务降级)
+
 20181214 : 初始化基础模块架构
 
 author: **yushuai_w@163.com**

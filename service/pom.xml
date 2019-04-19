@@ -103,6 +103,7 @@
 		<module>order-service</module>
 		<module>product-service</module>
 		<module>common-domain</module>
+		<module>front-page</module>
 	</modules>
 
 	<dependencyManagement>
