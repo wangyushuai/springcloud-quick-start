@@ -2,18 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.example.spring-cloud</groupId>
-        <artifactId>component</artifactId>
+        <artifactId>service</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.example.spring-cloud</groupId>
-    <artifactId>consul</artifactId>
+    <artifactId>consul-product-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consul</name>
-    <description>Consul project for Spring cloud</description>
+    <name>consul-product-service</name>
+    <description>consul Demo project for Spring Cloud</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,15 +20,15 @@
     </properties>
 
     <dependencies>
+        <!--Spring Cloud consul 支持-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
-
+        <!-- 健康检查依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
