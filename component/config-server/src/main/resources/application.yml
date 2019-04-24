@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangyushuai/test-config
+          timeout: 5
+          default-label: master
+server:
+  port: 8888
+
+# 本地测试配置（线上将覆盖本地配置）
+test:
+  config:
+    name: local
+    label: local
+    env: local
