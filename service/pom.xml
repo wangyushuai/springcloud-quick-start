@@ -21,41 +21,6 @@
 	</properties>
 
 	<dependencies>
-		<!--Spring AOP start-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-		<!--Spring AOP end-->
-
-		<!--springCloud discovery eureka discovery(client) Eureka服务发现  start -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-		<!--springCloud discovery eureka discovery(client) end -->
-
-		<!--SpringCloud-Hystrix start-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
-		<!--SpringCloud-Hystrix end-->
-
-		<!--springCloud routing -  ribbon start-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-		</dependency>
-		<!-- springCloud routing - ribbon end-->
-
-		<!--springCloud routing -  openfeign start-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-		<!-- springCloud routing - openfeign end -->
-
 		<!--reference custom common util start-->
 		<dependency>
 			<groupId>com.example.spring-cloud</groupId>
