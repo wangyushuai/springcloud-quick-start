@@ -66,6 +66,7 @@
 	</build>
 
 	<modules>
+		<module>consul-order-service</module>
 		<module>consul-product-service</module>
 		<module>order-service</module>
 		<module>product-service</module>

@@ -1,0 +1,12 @@
+server:
+  port: 8521
+spring:
+  application:
+    name: spring-cloud-consul-order-service
+  cloud:
+    consul:
+      discovery:
+        service-name: producer-order-service
+      host: localhost
+      port: 8500
+
