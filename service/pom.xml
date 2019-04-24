@@ -49,6 +49,7 @@
 	</build>
 
 	<modules>
+		<module>consul-product-service</module>
 		<module>order-service</module>
 		<module>product-service</module>
 		<module>common-domain</module>
