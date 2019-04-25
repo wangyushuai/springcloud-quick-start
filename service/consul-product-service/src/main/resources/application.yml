@@ -7,5 +7,6 @@ spring:
     consul:
       discovery:
         serviceName: producer-product-service
+        enabled: true
       host: localhost
       port: 8500

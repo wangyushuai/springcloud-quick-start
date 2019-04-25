@@ -38,6 +38,14 @@
 		<!--<scope>runtime</scope>-->
 		<!--</dependency>-->
 
+		<!--IDEA recommend config dependency start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--IDEA recommend config dependency end-->
+
 		<!--reference custom common util start-->
 		<dependency>
 			<groupId>com.example.spring-cloud</groupId>

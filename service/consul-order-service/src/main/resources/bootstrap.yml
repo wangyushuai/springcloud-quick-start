@@ -7,6 +7,18 @@ spring:
     consul:
       discovery:
         service-name: producer-order-service
+        enabled: true
       host: localhost
       port: 8500
+      config:
+        name: ${spring.application.name}
+        enabled: true
+        format: yaml
+        watch:
+          enabled: true
+        fail-fast: false
+#  profiles:
+#    active: pre
+
+
 

@@ -10,8 +10,6 @@ spring:
           default-label: master
 server:
   port: 8888
-
-# 本地测试配置（线上将覆盖本地配置）
 test:
   config:
     name: local
