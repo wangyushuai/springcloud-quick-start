@@ -1,12 +1,8 @@
-# 当前服务端口号
 server:
   port: 8501
-
 spring:
   application:
-  #  application 应用名称
     name: spring-cloud-consul-product-service
-  # 服务调用名称
   cloud:
     consul:
       discovery:
