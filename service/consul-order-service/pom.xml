@@ -28,7 +28,7 @@
             <!--<groupId>org.springframework.cloud</groupId>-->
             <!--<artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
         <!--</dependency>-->
-        <!--直接引入All 包含了: discorvery,config-->
+        <!--直接引入All 包含了: discorvery,config,bus-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-all</artifactId>

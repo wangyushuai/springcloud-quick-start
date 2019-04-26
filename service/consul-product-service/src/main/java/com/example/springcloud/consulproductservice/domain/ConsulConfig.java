@@ -1,4 +1,4 @@
-package com.example.springcloud.consulorderservice.domain;
+package com.example.springcloud.consulproductservice.domain;
 
 import com.example.springcloud.util.json.JsonUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -17,7 +17,7 @@ public class ConsulConfig {
 
     /**
      * 从全局配置中读取
-     */
+      */
     private String context;
 
     public String getName() {

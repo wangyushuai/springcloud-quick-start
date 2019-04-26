@@ -12,7 +12,7 @@
     <artifactId>consul-product-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>consul-product-service</name>
-    <description>consul Demo project for Spring Cloud</description>
+    <description>consul demo project for Spring Cloud</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,10 +20,15 @@
     </properties>
 
     <dependencies>
-        <!--Spring Cloud consul 支持-->
+        <!-- Consul discovery-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
+        <!-- Consul Config-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-config</artifactId>
         </dependency>
         <!-- 健康检查依赖-->
         <dependency>
