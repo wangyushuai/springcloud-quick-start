@@ -18,6 +18,8 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.M3</spring-cloud.version>
+		<common-util.version>0.0.1-SNAPSHOT</common-util.version>
+		<common-domain.version>0.0.1-SNAPSHOT</common-domain.version>
 	</properties>
 
 	<dependencies>
@@ -50,7 +52,7 @@
 		<dependency>
 			<groupId>com.example.spring-cloud</groupId>
 			<artifactId>common-util</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${common-util.version}</version>
 		</dependency>
 		<!--reference custom common util end-->
 
@@ -58,7 +60,7 @@
 		<dependency>
 			<groupId>com.example.spring-cloud</groupId>
 			<artifactId>common-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${common-domain.version}</version>
 		</dependency>
 		<!-- reference common domain model end -->
 
