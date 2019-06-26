@@ -2,6 +2,7 @@ package com.example.springcloud.util.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,26 +15,11 @@ import java.util.Date;
 public class RestResponse implements Serializable {
 
     private final static long serialVersionUID = 1L;
-    /**
-     * 成功状态
-     */
-    private final static int STATUS_SUCCESS = 200;
-
-    /**
-     * 代码错误状态
-     */
-    private final static int STATUS_ERROR_INTERNAL_SERVER_ERROR = 500;
-
-    /**
-     * 服务不可用（针对熔断&服务降级的情况）
-     */
-    private final static int STATUS_ERROR_SERVICE_UNAVAILIABLE = 503;
-
 
     /**
      * API 状态
      */
-    private int status;
+    private Integer status;
     //@JsonInclude(JsonInclude.Include.NON_NULL)//不为空时,返回
     /**
      * API 数据
@@ -55,7 +41,7 @@ public class RestResponse implements Serializable {
      * 程序耗时
      */
     //@JsonIgnore//不返回注解
-    private long time;
+    private Long time;
 
     /**
      * 构造函数
@@ -71,12 +57,19 @@ public class RestResponse implements Serializable {
     }
 
     /**
+     * 默认构造函数
+     * 防止反序列化报错
+     */
+    public RestResponse() {
+    }
+
+    /**
      * 请求成功
      * @param data
      * @return
      */
     public static RestResponse buildSuccess(Object data) {
-        return new RestResponse(STATUS_SUCCESS, "success", data);
+        return new RestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), data);
     }
 
 
@@ -86,24 +79,25 @@ public class RestResponse implements Serializable {
      * @return
      */
     public static RestResponse buildError_InternalServerError(Object data) {
-        return new RestResponse(STATUS_ERROR_INTERNAL_SERVER_ERROR, "error", data);
+        return new RestResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), data);
     }
 
     /**
+     * 服务不可用状态嘛
      * 返回错误码（服务不可用时，返回此方法），但推荐直接使用异常类
      * @param data
      * @return
      */
     public static RestResponse buildError_ServiceUnavailable(Object data) {
-        return new RestResponse(STATUS_ERROR_SERVICE_UNAVAILIABLE, "error", data);
+        return new RestResponse(HttpStatus.SERVICE_UNAVAILABLE.value(), HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase(), data);
     }
 
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -131,11 +125,11 @@ public class RestResponse implements Serializable {
         this.timestamp = timestamp;
     }
 
-    public String getTime() {
-        return time + "ms";
+    public Long getTime() {
+        return time;
     }
 
-    public void setTime(long time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 
