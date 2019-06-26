@@ -20,15 +20,10 @@
     </properties>
 
     <dependencies>
-        <!-- Consul discovery-->
+        <!--consul 依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-        <!-- Consul Config-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-config</artifactId>
+            <artifactId>spring-cloud-starter-consul-all</artifactId>
         </dependency>
         <!-- 健康检查依赖-->
         <dependency>

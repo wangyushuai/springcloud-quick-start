@@ -1,25 +1,11 @@
-server:
-  port: 8531
 spring:
-  application:
-    name: spring-cloud-consul-product-service
   cloud:
     consul:
       discovery:
-        serviceName: producer-product-service
+        serviceName: consul-product-service
         enabled: true
       host: localhost
       port: 8500
-      config:
-        name: ${spring.application.name}
-        enabled: true
-        format: yaml
-#        watch:
-#          enabled: true
-        fail-fast: false
-#  profiles:
-#    active: pre
-
 
 
 

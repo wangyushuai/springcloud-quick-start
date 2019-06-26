@@ -1,0 +1,5 @@
+server:
+  port: 18501
+spring:
+  application:
+    name: consul-order-service

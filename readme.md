@@ -3,6 +3,10 @@
  ![Spring-Cloud截图](https://img-blog.csdnimg.cn/20181212194132161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NodWFpX3d5,size_16,color_FFFFFF,t_70)
 
 ## 更新日志
+20190626 ：SpringCloud 整合Consul 服务发现（consul-order-service, consul-product-service）
+
+20190626 ： Fix RestResponse.java BUG;
+
 20190419 ： 添加前台页面 front-page 模块
 
 20181217 : SpringCloud 整合Hystrix2.1.0(熔断&服务降级)
@@ -13,7 +17,7 @@ author: **yushuai_w@163.com**
 ## 项目亮点
 1. 通用工具部分(common-util)：封装了部分业务场景的实用工具类(如：AOP API计时, Restful响应模型, 读取服务器配置工具类, JSON工具类, 异常工具类等),大家可以直接copy使用。
 
-2. 组件部分(component)： 整合了SpringCloud全家桶及Netflix组件(Eureka,Zuul,Hystrix,Ribbon,Feign)
+2. 组件部分(component)： 整合了SpringCloud全家桶及Netflix组件(Eureka,Zuul,Hystrix,Ribbon,Feign,Consul等组件)
 
 3. 微服务部分(service)： 采用了三个典型的业务场景Demo(订单服务,产品服务,用户服务，通用实体集)，模拟了服务间的调用（Feign,Rebbion)，服务熔断(hystrix)等场景
 

@@ -1,0 +1,5 @@
+server:
+  port: 18510
+spring:
+  application:
+    name: consul-product-service

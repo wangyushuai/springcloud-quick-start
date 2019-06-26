@@ -1,6 +1,7 @@
 package com.example.springcloud.consulorderservice.domain;
 
 import com.example.springcloud.util.json.JsonUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -11,13 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "test.config")
 public class ConsulConfig {
-    private String name = "local";
-    private String prefix = "local";
-    private String profiles = "local";
+    private String name = "null";
+    private String prefix = "null";
+    private String profiles = "null";
 
     /**
-     * 从全局配置中读取
+     * 从全局配置中读取,设置默认值
      */
+    @Value("${test.config.not.config:null}")
     private String context;
 
     public String getName() {

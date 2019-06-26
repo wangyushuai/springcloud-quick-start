@@ -1,30 +1,21 @@
-server:
-  port: 8521
 spring:
-  application:
-    name: spring-cloud-consul-order-service
   cloud:
     consul:
-      discovery:
-        service-name: producer-order-service
-        enabled: true
-      host: localhost
+      host: localhost  #阿里云测试Consul
       port: 8500
-      config:
-        name: ${spring.application.name}
-        enabled: true
-        format: yaml
-        watch:
-          enabled: true
-        fail-fast: false
-#  profiles:
-#    active: pre
-test:
-  config:
-    name: application
-    prefix: config
-    profiles: default
-    context: application
+      discovery:
+        instance-id: ${spring.application.name}-${random.uuid}-${spring.cloud.consul.port}
+        service-name: ${spring.application.name}
+#      config:
+#        name: ${spring.application.name}
+#        enabled: true
+#        format: yaml
+#        watch:
+#          enabled: true
+#        fail-fast: false
+#        prefix: configuration
+#        default-context: container
+#        data-key: app
 
 
 

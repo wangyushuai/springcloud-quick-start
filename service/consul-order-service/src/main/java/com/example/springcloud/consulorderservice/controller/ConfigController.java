@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 读取Consul Config Demo
+ * 读取Consul Config Demo（consul 配置测试）
  * @author wangyushuai2@jd.com
  * @date 2019/4/25
  */
@@ -17,8 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/config")
 public class ConfigController {
 
-    @Value("${test.config.name:local}")
+    @Value("${test.config.name:null}")
     private String appName;
+
+    @Value("${test.config.not.config:null}")
+    private String test_notConfig;
 
     @Autowired
     ConsulConfig consulConfig;
@@ -30,6 +33,12 @@ public class ConfigController {
     @GetMapping("/app_name")
     public RestResponse describeAppName() {
         return RestResponse.buildSuccess(appName);
+    }
+
+
+    @GetMapping("/not_config_test")
+    public RestResponse describeNotConfig() {
+        return RestResponse.buildSuccess(test_notConfig);
     }
 
 
